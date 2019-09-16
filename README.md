@@ -42,7 +42,13 @@ Istio is deployed. Pods outside the mesh can't access pods inside the mesh.
 * `make istio-rbac` - enable RBAC in default namespace
 * `make istio-rbac-service-level` - allow access to services
 
-## 4. Controll egress
+## 4. Observability
+
+* `make kiali` - open `kiali` dashboard
+* `make jeager` - open `jeager` dashboard
+* `make grafana` - open `grafana` dashboard
+
+## 5. Control egress
 
 * `make sleep-pod` - deploy test pod in the mesh for curl requests 
 * `make test-outbound-google` -  curl https://www.google.com

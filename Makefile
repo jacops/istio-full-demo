@@ -73,6 +73,18 @@ istio-block-outbound:
 istio-allow-google:
 	kubectl apply -f manifests/google-service-entry.yaml
 
+app-istio-break-details-service:
+	kubectl apply -f istio-$(ISTIO_VERSION)/samples/bookinfo/networking/virtual-service-details-v2.yaml
+
+kiali:
+	./istio-$(ISTIO_VERSION)/bin/istioctl dashboard kiali
+
+jaeger:
+	./istio-$(ISTIO_VERSION)/bin/istioctl dashboard jaeger
+
+grafana:
+	./istio-$(ISTIO_VERSION)/bin/istioctl dashboard grafana
+
 minikube:
 	minikube -p $(CLUSTER_NAME) start --memory=16384 --cpus=4
 
