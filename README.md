@@ -47,6 +47,7 @@ Istio is deployed. Pods outside the mesh can't access pods inside the mesh.
 * `make kiali` - open `kiali` dashboard
 * `make jeager` - open `jeager` dashboard
 * `make grafana` - open `grafana` dashboard
+* `make app-istio-break-details-service` - make `details` service unavailable
 
 ## 5. Control egress
 
