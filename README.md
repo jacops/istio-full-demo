@@ -33,7 +33,8 @@ Istio is deployed. Pods outside the mesh can't access pods inside the mesh.
 * `make istio` - deploy `Istio`
 * `make app-istio` - deploy ingress gateway and destination rules (+ restart pods to inject sidecars)
 * `make test-non-authenticated-access` - deploy pod in separate namespace and test connection 
-* `make test-authenticated-access` - get on sidecar and curl using certificates
+* `make test-access` - get on a productpage sidecar and curl reviews service using certificates
+* `make test-access-no-certs` - get on a productpage sidecar and curl reviews service without a certificate
 * `make test-identity` - check identity of sidecar certificate
 * `make test-validity` - check validity of sidecar certificate
 
